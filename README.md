@@ -4,7 +4,7 @@ Este proyecto es parte del trabajo final para el curso de Data Science dictado p
 ## Integrantes
 * Casco
 * Romina Torres
-* Breide
+* Camila Breide
 * Cristin
 * Yelos
 
@@ -56,7 +56,7 @@ Para repartirnos los temas seria :
 Tabaquismo: 42 columnas
 Total: 42 columnas
 
-* Persona 2:
+* Camila Breide:
 Salud general y actividad física: 25 columnas
 Peso corporal: 9 columnas
 Total: 25 + 9 = 34 columnas
