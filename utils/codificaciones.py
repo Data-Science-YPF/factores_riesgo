@@ -181,3 +181,35 @@ condicion_fumador = {
     2: 'Ex fumador',
     99: 'No fumador'
 }
+
+fecha_med_colesterol = {
+    1: "Menos de 1 año",
+    2: "De 1 a 2 años",
+    3: "Más de 2 años",
+    99: "Ns/Nc"
+}
+
+ha_consumido_alc = {
+    1: 'Si',
+    2: 'No',
+    99: 'Ns/Nc'
+}
+
+fecha_ult_cons = {
+    1: 'Ultimos 30 dias',
+    2: 'Entre 1 mes hasta 1 año',
+    3: 'Mayor 1 año',
+    99: 'Ns/Nc'
+}
+
+manejo_alcholizado30 = {
+    1: 'Si',
+    2: 'No',
+    98: 'No manejo en el ultimo mes'
+}
+
+aprueba_aumento_imp_alchol = {
+    1: 'Si',
+    2: 'No',
+    99: 'Ns/Nc'
+}
