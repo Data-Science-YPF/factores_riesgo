@@ -213,3 +213,33 @@ aprueba_aumento_imp_alchol = {
     2: 'No',
     99: 'Ns/Nc'
 }
+
+sexo = {
+    1: 'Varon',
+    2: 'Mujer'
+}
+
+situacion_conyugal = {
+    1: 'Union',
+    2: 'Casado',
+    3: 'Separado',
+    4: 'Divorciado',
+    5: 'Viudo',
+    6: 'Soltero'    
+}
+
+nivel_educ= {
+    1: "Sin instrucción",
+    2: "Primario incompleto",
+    3: "Primario completo",
+    4: "Secundario incompleto",
+    5: "Secundario completo",
+    6: "Terciario/universitario incompleto",
+    7: "Terciario/universitario completo",
+    8: "Educación especial"
+}
+
+cobertura_salud = {
+    1: ' Con obra social, prepaga o servicio de emergencia médica',
+    2: 'Solo cobertura publica'
+}
