@@ -34,6 +34,11 @@ region = {
     6: 'Patagónica'
 }
 
+sexo = {
+    1: 'Varón',
+    2: 'Mujer'
+}
+
 tamanio_aglomerado = {
     1: 'Más de 1.500.000 habitantes',
     2: '500.001 a 1.500.000 habitantes',
