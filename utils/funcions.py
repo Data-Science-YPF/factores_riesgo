@@ -17,6 +17,13 @@ def to_snake_case(column_name):
     return column_name.strip().lower().replace(' ', '_')
 
 
+# Calculo de cantidad de tipos de tabaco fumado
+# Por cada tipo de tabaco respondido como '1' (Sí) suma 1 al total
+def calcular_tipos_tabaco(df, columnas):
+    # Contar los 1s en el subconjunto de columnas
+    return df[columnas].apply(lambda row: (row == 1).sum(), axis=1)
+
+
 # Renombrar las columnas de un DataFrame
 def rename_df_to_snake_Case(df):
     df.columns = [to_snake_case(col) for col in df.columns]
