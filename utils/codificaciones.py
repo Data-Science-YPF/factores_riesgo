@@ -248,3 +248,12 @@ cobertura_salud = {
     1: ' Con obra social, prepaga o servicio de emergencia médica',
     2: 'Solo cobertura publica'
 }
+
+freq_cons_alch = {
+    100:'Nunca consumio',
+    200:'Ultimo consumo mayor a 1 año',
+    300:'Ultimo consumo mayor a 1 mes',
+    400:'Consumo ultimo mes mayor/igual a 15 dias',
+    500:'Consumo ultimo mes menor a 15 dias',
+    404:'Informacion insuficiente para el calculo'
+}
