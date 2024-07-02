@@ -257,3 +257,11 @@ freq_cons_alch = {
     500:'Consumo ultimo mes menor a 15 dias',
     404:'Informacion insuficiente para el calculo'
 }
+
+tipo_bebida = {
+    1: 'vino',
+    2: 'cerveza',
+    3: 'bebidas_fuertes',
+    4: 'otras bebidas',
+    5: 'varias'
+}
