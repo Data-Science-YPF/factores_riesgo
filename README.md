@@ -32,49 +32,49 @@ La encuesta utilizada para la captura de datos puede encontrarse en el siguiente
 https://www.indec.gob.ar/ftp/cuadros/sociedad/cuestionario_enfr_2018.pdf
 
 ## Estructura del repositorio
-README.md
-limpieza_datos.ipynb
-analisis_exploratorio.ipynb
-datasets - carpeta con los archivos correspondientes a todos los años
-    | friesgo2018.txt
-utils - carpeta con archivos de utilidad
-    | codificaciones.py - diccionarios correspondientes a toda la codificacion usada en los datasets
-    | funciones.py - funciones creadas para el uso comun en todo el analisis 
+* README.md
+* acondicionamiento.ipynb - archivo donde se realiza el renombre de columnas y limpieza general de los bloques temáticos
+* analisis_exploratorio.ipynb
+* datasets - carpeta con los archivos correspondientes a todos los años
+*    | friesgo2018.txt
+* utils - carpeta con archivos de utilidad
+*    | codificaciones.py - diccionarios correspondientes a toda la codificacion usada en los datasets
+*    | funciones.py - funciones creadas para el uso comun en todo el analisis 
 
 ## Organizacion del trabajo
 
 ### Bloques temáticos
 Para un procesamiento eficiente y organizado, agruparemos las columnas por bloques tematicos. Para mas detalles de las columnas en cada bloque, remitirse al final de este README.
 
-● Ubicacion
-● Características del encuestado
-● Salud general
-● Actividad física
-● Tabaquismo 
-● Hipertensión 
-● Peso corporal 
-● Alimentación 
-● Colesterol 
-● Consumo alcohol 
-● Diabetes
-● Mediciones antropometricas
-● Mediciones bioquimicas
+* Ubicacion
+* Características del encuestado
+* Salud general
+* Actividad física
+* Tabaquismo 
+* Hipertensión 
+* Peso corporal 
+* Alimentación 
+* Colesterol 
+* Consumo alcohol 
+* Diabetes
+* Mediciones antropometricas
+* Mediciones bioquimicas
 
 ### Limpieza de datos
 Este archivo contiene los pasos necesarios para la limpieza del dataset
-● Agrupamiento de las columnas en los bloques temáticos antes mencionados
-● Renombre de columnas por nombres más explícitos
-● Creación y cálculo de nuevas columnas
-● Identificación del tipo de variables utilizadas en cada bloque temático
+* Agrupamiento de las columnas en los bloques temáticos antes mencionados
+* Renombre de columnas por nombres más explícitos
+* Creación y cálculo de nuevas columnas
+* Identificación del tipo de variables utilizadas en cada bloque temático
 
 ### Análisis exploratorio
 Este archivo contiene los pasos necesarios para realizar el análisis exploratorio de los datos, en una primera instancia, se tratan los bloques temáticos identificados en el archivo limpieza_datos.csv. Luego, todos los bloques temáticos se unifican en un único DataFrame para continuar con el análisis exploratorio del dataset limpio en su conjunto.
 
 El analisis exploratorio consiste en identificar y procesar estos puntos:
-● Nulos
-● Datos faltantes
-● Outliers
-● Colinealidad
+* Nulos
+* Datos faltantes
+* Outliers
+* Colinealidad
 
 Finalmente, se detectan 'Preguntas disparadoras' referidas al dataset final, que se responden mediante gráficos y analisis.
 
@@ -179,16 +179,61 @@ A continuacion se detalla cada bloque temático y sus respectivas variables
 ### Diabetes
 | Variable | Descripción | Tipo de variable |
 |-------------|-------------|-------------|
-| Celda1      | Celda2      | Celda3      |
-| Celda4      | Celda5      | Celda6      |
+| bidi01      | ¿Alguna vez un médico, un enfermero u otro profesional de la salud le dijo que tenía diabetes o azúcar alta en la sangre?      | var categorica      |
+| bidi02      | ¿Eso ocurrió cuando estaba embarazada?      | var categorica      |
+| bidi03      | ¿En las últimas dos semanas, estuvo haciendo algún tratamiento (medicamentos, dieta, ejercicio) indicado por un profesional de la salud para mantener controlada su diabetes/azúcar en sangre?      | var categorica      |
+| bidi04_01      | ¿Usted está haciendo algún tratamiento… con insulina?      | var categorica      |
+| bidi04_02      | ¿Usted está haciendo algún tratamiento… con dieta,ejercicios, reducción de peso?      | var categorica      |
+| bidi04_03      | ¿Usted está haciendo algún tratamiento… con medicamentos?      | var categorica      |
+| bidi05      | ¿Es insulinodependiente?      | var categorica      |
+| bidi06_01      | ¿Ha habido al menos un diagnóstico de diabetes entre sus familiares cosanguíneos directos (padres, hijos, hermanos)?      | var categorica      |
+| bidi06_02      | ¿Ha habido al menos un diagnostico de diabetes entre otros familiares cosanguíneos (abuelos, tíos, primos)?      | var categorica      |
+| bidi07      | ¿Cuando fue la última vez que le midieron glucemia/azúcar en sangre?      | var categorica      |
+| bidi08      | ¿Excluyendo la medición de glucemia o azúcar en sangre, hay algún lugar al que usted vaya habitualmente para hacerse un control relacionado con la diabetes?      | var categorica      |
+| bidi09      | Excluyendo la medición glucemia  y azúcar en sangre, ¿a qué lugar va habitualmente a hacerse esos controles?      | var categorica      |
+| bidi10      | Cuando usted va a ese lugar, ¿siempre lo atiende el mismo profesional de la salud?      | var categorica      |
+| bidi11      | ¿El médico o profesional que lo atiende en ese lugar conoce su historia clínica?      | var categorica      |
+| bidi12      | En los últimos 12 meses, ¿un profesional de la salud le examinó los pies para detectarle heridas o irritaciones?      | var categorica      |
+| bidi13      | En los últimos 12 meses, ¿le hicieron un examen de a vista en el que le dilataron las pupilas? (Este examen le habría ocasionado una sensibilidad temporal de luz brillante)      | var categorica      |
+| bidi14      | ¿Ha tomado alguna vez un curso o una clase sobre cómo controlar usted mismo su diabetes?      | var categorica      |
+| control_diabetes      | Medición de la glucemia/azúcar en sangre alguna vez por autorreporte      | var categorica      |
+
 ### Mediciones antropometricas
 | Variable | Descripción | Tipo de variable |
 |-------------|-------------|-------------|
-| Celda1      | Celda2      | Celda3      |
-| Celda4      | Celda5      | Celda6      |
+| bima01      | ¿El encuestado firmó el consentimiento?      | var categorica      |
+| bima02      | Esta mañana, ¿ha tomado café, café con leche, té, mate u otras bebidas que puedan contener cafeína?      | var categorica      |
+| bima03      | ¿El encuestado consintió medirse la presión?      | var categorica      |
+| bima04_01_a      | Primera medición/sistólica      | var numerica continua      |
+| bima04_01_b      | Primera medición/diastólica      | var numerica continua      |
+| bima04_02_a      | Segunda medición/sistólica      | var numerica continua      |
+| bima04_02_b      | Segunda medición/diastólica      | var numerica continua      |
+| bima04_03_a      | Tercera medición/sistólica      | var numerica continua      |
+| bima04_03_b      | Tercera medición/diastólica      | var numerica continua      |
+| promedio_sistolica      | Promedio de las dos últimas mediciones de tensión sistólica      | var numerica continua      |
+| promedio_diastolica      | Promedio de las dos últimas mediciones de tensión diastólica      | var numerica continua      |
+| ta_elevada      | Presión arterial elevada según mediciones físicas      | var categorica      |
+| prevalencia_hipertension_combinada      | Prevalencia de presión arterial elevada por autorreporte y/o medición física      | var categorica      |
+| bima06      | ¿El encuestado consintió medirse la altura?      | var categorica      |
+| bima07      | Medición de la altura en centímetros      | var numerica continua      |
+| bima09      | ¿El encuestado consintió pesarse?      | var categorica      |
+| bima10      | Medición del peso en kilogramos      | var numerica continua      |
+| imc_bima      | Índice de masa corporal según mediciones antropométricas      | var numerica continua      |
+| imc_categorias_bima      | IMC agrupado según mediciones antropométricas      | var categorica      |
+| bima12      | ¿El encuestado consintió medirse el perímetro de la cintura?      | var categorica      |
+| bima13      | Perímetro de cintura en centímetros      | var numerica continua      |
+| bima14      | Medición realizada      | var categorica      |
+
 ### Mediciones bioquimicas
 | Variable | Descripción | Tipo de variable |
 |-------------|-------------|-------------|
-| Celda1      | Celda2      | Celda3      |
-| Celda4      | Celda5      | Celda6      |
-
+| bimq01      | ¿El encuestado firmó el consentimiento?      | var categorica      |
+| bimq05      | Registre los valores de glucosa que le informe el personal de Salud [Medición en mg/dl]      | var numerica continua      |
+| bimq05_01      | Valor no registrado por el dispositivo      | var categorica      |
+| glucemia_elevada      | Glucemia elevada en mediciones bioquímicas      | var categorica      |
+| prevalencia_glucemia_elevada_combinada      | Prevalencia de glucemia por autorreporte o medición bioquímica      | var categorica      |
+| findrisc      | Riesgo de desarrollar diabetes mellitus en los próximos 10 años según puntaje FINDRISC      | var categorica      |
+| bimq06      | Registre los valores de colesterol que le informe el personal de Salud [Medición en mg/dl]      | var numerica continua      |
+| bimq06_01      | Valor no registrado por el dispositivo      | var categorica      |
+| colesterol_elevado      | Colesterol elevado en mediciones bioquímicas      | var categorica      |
+| prevalencia_colesterol_combinada      | Prevalencia de colesterol por autorreporte o medición bioquímica      | var categorica      |
