@@ -265,3 +265,30 @@ tipo_bebida = {
     4: 'otras bebidas',
     5: 'varias'
 }
+
+cod_provincia_abrev = {
+    2: 'CABA',
+    6: 'BS AS',
+    10: 'CAT',
+    14: 'CBA',
+    18: 'COR',
+    22: 'CHA',
+    26: 'CHU',
+    30: 'ER',
+    34: 'FOR',
+    38: 'JUY',
+    42: 'LP',
+    46: 'LR',
+    50: 'MDZ',
+    54: 'MSN',
+    58: 'NQN',
+    62: 'RN',
+    66: 'SAL',
+    70: 'SJ',
+    74: 'SL',
+    78: 'SC',
+    82: 'SF',
+    86: 'SDE',
+    90: 'TUC',
+    94: 'TF'
+}
