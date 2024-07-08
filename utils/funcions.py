@@ -37,3 +37,14 @@ def calcular_valores_columna(df):
     # Imprimimos los resultados
     for col, counts in value_counts_dict.items():
         print(f"Proporción de valores para la columna {col}:\n{counts}\n")
+
+def filtrar_columnas(dataset, columnas_interes):
+    # Verificar que todas las columnas en column_list existan en el DataFrame original
+    for columna in columnas_interes:
+        if columna not in dataset.columns:
+            raise ValueError(f"La columna '{columna}' no existe en el DataFrame original.")
+    
+    # Crear el DataFrame derivado seleccionando solo las columnas especificadas
+    dataframe_filtrado = dataset[columnas_interes].copy()
+    
+    return dataframe_filtrado
