@@ -48,3 +48,10 @@ def filtrar_columnas(dataset, columnas_interes):
     dataframe_filtrado = dataset[columnas_interes].copy()
     
     return dataframe_filtrado
+
+def obtener_valores_nulos_con_id(df, columna_interes, columnas_objetivo):
+    # Filtrar las filas donde la columna de interés tiene valores nulos
+    filas_nulas = df[df[columna_interes].isna()]   
+    # Obtener los valores de las columnas objetivo para estas filas
+    valores_objetivo = filas_nulas[columnas_objetivo] 
+    return valores_objetivo
