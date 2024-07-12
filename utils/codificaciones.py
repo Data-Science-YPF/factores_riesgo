@@ -293,3 +293,28 @@ cod_provincia_abrev = {
     90: 'TUC',
     94: 'TF'
 }
+
+es_diabetico = {
+    1: 'Si',
+    2: 'No',
+    99: 'Ns/Nc'
+}
+
+es_diabetes_gestacional = {
+    1: 'Si',
+    2: 'No',
+    99: 'Ns/Nc'
+}
+
+en_tratamiento_diabetes = {
+    1: 'Si',
+    2: 'No'
+}
+
+ultima_medicion_glucemia = {
+    1: 'Menos de 1 año',
+    2: 'De 1 a 2 años',
+    3: 'Más de 2 años',
+    4: 'Nunca se la midió',
+    99: 'Ns/nc'
+}
