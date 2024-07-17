@@ -65,7 +65,7 @@ def obtener_valores_nulos_con_id(df, columna_interes, columnas_objetivo):
 # Si se proporciona un diccionario para reemplazar valores codificados
 # se muestra el valor correspondiente
 def mostrar_valores_columna(df, columna, diccionario_reemplazo=None):
-    # Obtén los valores únicos y sus conteos
+    # Obtener los valores únicos y sus conteos
     conteo_valores = df[columna].value_counts(dropna=False)
     total_valores = len(df[columna])
 
@@ -85,3 +85,29 @@ def mostrar_valores_columna(df, columna, diccionario_reemplazo=None):
     }).reset_index(drop=True)
  
     return resultados
+
+
+# Funcion para variables numericas continuas
+# Forma 2 grupos, uno de NaN y otro del resto de valores
+# calcula la cantidad y proporcion de cada grupo y los muestra
+def mostrar_valores_columna_numerica(df, columna):
+    # Obtener el total de valores en la columna
+    total_valores = len(df[columna])
+
+    # Contar los valores NaN y los valores no NaN
+    valores_nan = df[columna].isna().sum()
+    valores_no_nan = total_valores - valores_nan
+
+    # Calcular la proporción
+    nan_proporcion = (valores_nan / total_valores) * 100
+    no_nan_proporcion = (valores_no_nan / total_valores) * 100
+
+    # Crear el DataFrame de resultados
+    resultados = pd.DataFrame({
+        'Valor': ['NaN', 'Otros'],
+        'Cantidad': [valores_nan, valores_no_nan],
+        'Proporción (%)': [f"{nan_proporcion:.2f}%", f"{no_nan_proporcion:.2f}%"]
+    })
+ 
+    return resultados
+

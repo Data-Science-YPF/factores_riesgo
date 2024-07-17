@@ -318,3 +318,30 @@ ultima_medicion_glucemia = {
     4: 'Nunca se la midió',
     99: 'Ns/nc'
 }
+
+bebio_cafeina = {
+    1: 'Si',
+    2: 'No'
+}
+
+presion_arterial_elevada = {
+    1: 'Elevada',
+    2: 'No elevada'
+}
+
+imc_categoria = {
+    1: 'Bajo',
+    2: 'Medio',
+    3: 'Alto',
+    99: 'Ns/Nc'
+}
+
+consentimiento_ma = {
+    1: 'Si',
+    2: 'No' 
+}
+
+consentimiento_presion = {
+    1: 'Si',
+    2: 'No' 
+}
