@@ -345,3 +345,13 @@ consentimiento_presion = {
     1: 'Si',
     2: 'No' 
 }
+
+glucemia_elevada = {
+    1: 'Elevada',
+    2: 'No elevada'
+}
+
+colesterol_elevado = {
+    1: 'Elevado',
+    2: 'No elevado'
+}
