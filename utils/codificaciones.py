@@ -58,6 +58,12 @@ aglomerado = {
     9: 'Resto de los aglomerados'
 }
 
+fumado_100_cigarrillos = {
+    1: 'Sí',
+    2: 'No',
+    99: 'Ns/Nc'
+}
+
 periodicidad_fumador = {
     1: '...todos los días?',
     2: '...algunos días?',
@@ -184,7 +190,7 @@ acuerdo_impuesto_tabaco = {
 condicion_fumador = {
     1: 'Fumador actual',
     2: 'Ex fumador',
-    99: 'No fumador'
+    3: 'No fumador'
 }
 
 fecha_med_colesterol = {
@@ -219,21 +225,16 @@ aprueba_aumento_imp_alchol = {
     99: 'Ns/Nc'
 }
 
-sexo = {
-    1: 'Varon',
-    2: 'Mujer'
-}
-
 situacion_conyugal = {
     1: 'Union',
     2: 'Casado',
     3: 'Separado',
     4: 'Divorciado',
     5: 'Viudo',
-    6: 'Soltero'    
+    6: 'Soltero'
 }
 
-nivel_educ= {
+nivel_educ = {
     1: "Sin instrucción",
     2: "Primario incompleto",
     3: "Primario completo",
@@ -250,12 +251,12 @@ cobertura_salud = {
 }
 
 freq_cons_alch = {
-    100:'Nunca consumio',
-    200:'Ultimo consumo mayor a 1 año',
-    300:'Ultimo consumo mayor a 1 mes',
-    400:'Consumo ultimo mes mayor/igual a 15 dias',
-    500:'Consumo ultimo mes menor a 15 dias',
-    404:'Informacion insuficiente para el calculo'
+    100: 'Nunca consumio',
+    200: 'Ultimo consumo mayor a 1 año',
+    300: 'Ultimo consumo mayor a 1 mes',
+    400: 'Consumo ultimo mes mayor/igual a 15 dias',
+    500: 'Consumo ultimo mes menor a 15 dias',
+    404: 'Informacion insuficiente para el calculo'
 }
 
 tipo_bebida = {
@@ -291,4 +292,66 @@ cod_provincia_abrev = {
     86: 'SDE',
     90: 'TUC',
     94: 'TF'
+}
+
+es_diabetico = {
+    1: 'Si',
+    2: 'No',
+    99: 'Ns/Nc'
+}
+
+es_diabetes_gestacional = {
+    1: 'Si',
+    2: 'No',
+    99: 'Ns/Nc'
+}
+
+en_tratamiento_diabetes = {
+    1: 'Si',
+    2: 'No'
+}
+
+ultima_medicion_glucemia = {
+    1: 'Menos de 1 año',
+    2: 'De 1 a 2 años',
+    3: 'Más de 2 años',
+    4: 'Nunca se la midió',
+    99: 'Ns/nc'
+}
+
+bebio_cafeina = {
+    1: 'Si',
+    2: 'No'
+}
+
+presion_arterial_elevada = {
+    1: 'Elevada',
+    2: 'No elevada'
+}
+
+imc_categoria = {
+    1: 'Bajo',
+    2: 'Medio',
+    3: 'Alto',
+    99: 'Ns/Nc'
+}
+
+consentimiento_ma = {
+    1: 'Si',
+    2: 'No' 
+}
+
+consentimiento_presion = {
+    1: 'Si',
+    2: 'No' 
+}
+
+glucemia_elevada = {
+    1: 'Elevada',
+    2: 'No elevada'
+}
+
+colesterol_elevado = {
+    1: 'Elevado',
+    2: 'No elevado'
 }
