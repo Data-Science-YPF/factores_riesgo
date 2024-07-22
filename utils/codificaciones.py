@@ -355,3 +355,9 @@ colesterol_elevado = {
     1: 'Elevado',
     2: 'No elevado'
 }
+
+condicion_actividad = {
+    1:'Ocupado',
+    2:'Desocupado',
+    3:'Inactivo'
+}
