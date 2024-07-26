@@ -82,28 +82,74 @@ Finalmente, se detectan 'Preguntas disparadoras' referidas al dataset final, que
 A continuacion se detalla cada bloque temático y sus respectivas variables
 
 ### Ubicacion
-| Variable | Descripción | Tipo de variable |
+| Variable | Descripci�n | Tipo de variable |
 |-------------|-------------|-------------|
-| Celda1      | Celda2      | Celda3      |
-| Celda4      | Celda5      | Celda6      |
+| id |  | var categorica |
+| cod_provincia |  | var categorica |
+| region |  | var categorica |
+| tamanio_aglomerado |  | var categorica |
+| aglomerado |  | var categorica |
+| localidades_150 |  | var categorica |
+| submuestra |  | var categorica |
+
 
 ### Características del encuestado
-| Variable | Descripción | Tipo de variable |
+| Variable | Descripci�n | Tipo de variable |
 |-------------|-------------|-------------|
-| Celda1      | Celda2      | Celda3      |
-| Celda4      | Celda5      | Celda6      |
+| id |  | var categorica |
+| bhch02 |  | var categorica |
+| bhch03 |  | var categorica |
+| bhch04 |  | var categorica |
+| rango_edad |  | var categorica |
+| bhch05 |  | var categorica |
+| nivel_instruccion |  | var categorica |
+| nivel_instruccion_agrupado |  | var categorica |
+| bhch10_01 |  | var categorica |
+| bhch10_02 |  | var categorica |
+| bhch10_03 |  | var categorica |
+| bhch10_04 |  | var categorica |
+| bhch10_05 |  | var categorica |
+| bhch10_06 |  | var categorica |
+| bhch10_99 |  | var categorica |
+| cobertura_salud |  | var categorica |
+| condicion_actividad |  | var categorica |
+
 
 ### Salud general
-| Variable | Descripción | Tipo de variable |
+| Variable | Descripci�n | Tipo de variable |
 |-------------|-------------|-------------|
-| Celda1      | Celda2      | Celda3      |
-| Celda4      | Celda5      | Celda6      |
+| id |  | var categorica |
+| bisg01 |  | var categorica |
+| bisg02 |  | var categorica |
+| bisg03 |  | var categorica |
+| bisg04 |  | var categorica |
+| bisg05 |  | var categorica |
+
 
 ### Actividad física
-| Variable | Descripción | Tipo de variable |
+| Variable | Descripci�n | Tipo de variable |
 |-------------|-------------|-------------|
-| Celda1      | Celda2      | Celda3      |
-| Celda4      | Celda5      | Celda6      |
+| id |  | var categorica |
+| biaf01 |  | var categorica |
+| biaf02_m |  | var categorica |
+| biaf02_99 |  | var categorica |
+| biaf03 |  | var categorica |
+| biaf04_m |  | var categorica |
+| biaf04_99 |  | var categorica |
+| biaf05 |  | var categorica |
+| biaf06_m |  | var categorica |
+| biaf06_99 |  | var categorica |
+| biaf07_m |  | var categorica |
+| biaf07_99 |  | var categorica |
+| biaf08 |  | var categorica |
+| biaf09 |  | var categorica |
+| biaf10_01 |  | var categorica |
+| biaf10_02 |  | var categorica |
+| biaf10_03 |  | var categorica |
+| biaf10_04 |  | var categorica |
+| nivel_actividad_fisica |  | var categorica |
+| barreras_actividad_fisica |  | var categorica |
+
 
 ### Tabaquismo 
 | Variable | Descripción | Tipo de variable |
@@ -152,30 +198,104 @@ A continuacion se detalla cada bloque temático y sus respectivas variables
 | imagenes_tabaco      | Pensó en dejar de fumar por las frases o imágenes de los paquetes de cigarrillos en los últimos 30 días      | var categorica      |
 
 ### Hipertensión 
-| Variable | Descripción | Tipo de variable |
+| Variable | Descripci�n | Tipo de variable |
 |-------------|-------------|-------------|
-| Celda1      | Celda2      | Celda3      |
-| Celda4      | Celda5      | Celda6      |
+| id |  | var categorica |
+| biha01 |  | var categorica |
+| biha02 |  | var categorica |
+| biha03 |  | var categorica |
+| biha04 |  | var categorica |
+| biha05_01 |  | var categorica |
+| biha05_02 |  | var categorica |
+| biha06 |  | var categorica |
+| biha06_99 |  | var categorica |
+| biha07 |  | var categorica |
+| biha08 |  | var categorica |
+| biha09 |  | var categorica |
+| biha10 |  | var categorica |
+| biha11 |  | var categorica |
+| biha11_99 |  | var categorica |
+| biha12 |  | var categorica |
+| biha13 |  | var categorica |
+| biha14 |  | var categorica |
+| biha15 |  | var categorica |
+| control_hipertension |  | var categorica |
+
 ### Peso corporal 
-| Variable | Descripción | Tipo de variable |
+| Variable | Descripci�n | Tipo de variable |
 |-------------|-------------|-------------|
-| Celda1      | Celda2      | Celda3      |
-| Celda4      | Celda5      | Celda6      |
+| id |  | var categorica |
+| bipc01 |  | var categorica |
+| bipc02 |  | var categorica |
+| bipc03 |  | var categorica |
+| bipc04 |  | var categorica |
+| bipc04_99 |  | var categorica |
+| bipc05 |  | var categorica |
+| bipc05_99 |  | var categorica |
+| imc |  | var categorica |
+| imc_categorias |  | var categorica |
+
 ### Alimentación 
-| Variable | Descripción | Tipo de variable |
+| Variable | Descripci�n | Tipo de variable |
 |-------------|-------------|-------------|
-| Celda1      | Celda2      | Celda3      |
-| Celda4      | Celda5      | Celda6      |
+| id |  | var categorica |
+| bial01 |  | var categorica |
+| bial02 |  | var categorica |
+| bial03 |  | var categorica |
+| bial03_99 |  | var categorica |
+| bial04 |  | var categorica |
+| bial04_99 |  | var categorica |
+| bial05 |  | var categorica |
+| bial05_99 |  | var categorica |
+| bial06 |  | var categorica |
+| bial06_99 |  | var categorica |
+| bial07 |  | var categorica |
+| bial08 |  | var categorica |
+| bial09 |  | var categorica |
+| bial10 |  | var categorica |
+| promedio_fv_diario |  | var categorica |
+| consumo_fv |  | var categorica |
+| barreras_fyv |  | var categorica |
+
 ### Colesterol 
-| Variable | Descripción | Tipo de variable |
+| Variable | Descripci�n | Tipo de variable |
 |-------------|-------------|-------------|
-| Celda1      | Celda2      | Celda3      |
-| Celda4      | Celda5      | Celda6      |
+| id |  | var categorica |
+| bico01 |  | var categorica |
+| bico02 |  | var categorica |
+| bico03 |  | var categorica |
+| bico04 |  | var categorica |
+| bico05_01 |  | var categorica |
+| bico05_02 |  | var categorica |
+| control_colesterol |  | var categorica |
+| prevalencia_colesterol |  | var categorica |
+
 ### Consumo alcohol 
-| Variable | Descripción | Tipo de variable |
+| Variable | Descripci�n | Tipo de variable |
 |-------------|-------------|-------------|
-| Celda1      | Celda2      | Celda3      |
-| Celda4      | Celda5      | Celda6      |
+| id |  | var categorica |
+| bica01 |  | var categorica |
+| bica02 |  | var categorica |
+| bica03_01 |  | var categorica |
+| bica03_02 |  | var categorica |
+| bica03_99 |  | var categorica |
+| bica04_01_b |  | var categorica |
+| bica04_01_c |  | var categorica |
+| bica04_02_b |  | var categorica |
+| bica04_02_c |  | var categorica |
+| bica04_03_b |  | var categorica |
+| bica04_03_c |  | var categorica |
+| bica04_04 |  | var categorica |
+| bica05_01_b |  | var categorica |
+| bica05_01_c |  | var categorica |
+| bica05_02_b |  | var categorica |
+| bica05_02_c |  | var categorica |
+| bica05_03_b |  | var categorica |
+| bica05_03_c |  | var categorica |
+| bica05_04 |  | var categorica |
+| bica06 |  | var categorica |
+| bica07 |  | var categorica |
+| consumo_regular_riesgo |  | var categorica |
 ### Diabetes
 | Variable | Descripción | Tipo de variable |
 |-------------|-------------|-------------|
