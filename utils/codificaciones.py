@@ -361,3 +361,10 @@ condicion_actividad = {
     2:'Desocupado',
     3:'Inactivo'
 }
+
+consumo_sal = {
+    2:'Alto',
+    3:'Medio',
+    4:'Bajo',
+    5:'Muy bajo'
+}
