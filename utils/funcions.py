@@ -111,25 +111,6 @@ def mostrar_valores_columna_numerica(df, columna):
  
     return resultados
 
-# Definir una funcion para eliminar los outliers
-def eliminar_outliers(df, cols_to_check):
-    df_clean = df.copy()
-
-    for col in cols_to_check:
-        # Calcular los percentiles 25 y 75 (primer y tercer cuartil)
-        Q1 = df_clean[col].quantile(0.25)
-        Q3 = df_clean[col].quantile(0.75)
-        # Calcular el rango intercuartil (IQR)
-        IQR = Q3 - Q1
-        # Definir los límites para detectar outliers
-        lower_bound = Q1 - 1.5 * IQR
-        upper_bound = Q3 + 1.5 * IQR
-        
-        # Filtrar el DataFrame para eliminar los registros con outliers
-        df_clean = df_clean[(df_clean[col] >= lower_bound) & (df_clean[col] <= upper_bound)]
-
-    return df_clean
-
 # Función para calcular el porcentaje de outliers en una columna
 def calcular_porcentaje_outliers(col):
     Q1 = col.quantile(0.25)
@@ -141,31 +122,23 @@ def calcular_porcentaje_outliers(col):
     porcentaje_outliers = (len(outliers) / len(col)) * 100
     return porcentaje_outliers, len(outliers)
 
-def eliminar_outliers2(df, cols_to_check):
-    """
-    Elimina registros que contengan outliers en al menos una de las columnas especificadas.
-    
-    Parameters:
-    df (pd.DataFrame): DataFrame en el que se buscarán y eliminarán outliers.
-    cols_to_check (list): Lista de nombres de columnas en las que se verificarán outliers.
 
-    Returns:
-    pd.DataFrame: DataFrame sin registros que contienen outliers en las columnas especificadas.
-    """
-    df_clean = df.copy()
-    outliers_mask = pd.Series([False] * len(df_clean))  # Máscara booleana inicializada en False
+def identificar_outliers(df, columnas):
+    # Conjunto para almacenar los índices de los registros con outliers
+    indices_outliers = set()
 
-    for col in cols_to_check:
-        Q1 = df_clean[col].quantile(0.25)
-        Q3 = df_clean[col].quantile(0.75)
+    for columna in columnas:
+        # Calcular el rango intercuartílico (IQR)
+        Q1 = df[columna].quantile(0.25)
+        Q3 = df[columna].quantile(0.75)
         IQR = Q3 - Q1
-        lower_bound = Q1 - 1.5 * IQR
-        upper_bound = Q3 + 1.5 * IQR
-        
-        # Actualizar la máscara booleana si hay outliers en la columna actual
-        outliers_mask = outliers_mask | (df_clean[col] < lower_bound) | (df_clean[col] > upper_bound)
 
-    # Filtrar el DataFrame para mantener solo las filas que no son outliers
-    df_clean = df_clean[~outliers_mask]
+        # Definir los límites inferior y superior para identificar outliers
+        limite_inferior = Q1 - 1.5 * IQR
+        limite_superior = Q3 + 1.5 * IQR
 
-    return df_clean
+        # Identificar los índices de los registros que son outliers
+        outliers = df[(df[columna] < limite_inferior) | (df[columna] > limite_superior)].index
+        indices_outliers.update(outliers)
+
+    return indices_outliers
