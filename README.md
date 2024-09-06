@@ -84,12 +84,24 @@ Finalmente, se detectan 'Preguntas disparadoras' referidas al dataset final, que
 
 
 ## Modelos de aprendizaje supervisado (ModelosClasificacion.ipynb)
-El archivo contiene los 
+El archivo utiliza el dataset exportado al final del Análisis exploratorio
+Contiene una pequeña limpieza y ajuste de los datos, preparándolos para ser utilizados en varios modelos de aprendizaje supervisado
+Se utilizan 3 modelos de clasificación, utilizando en todos la variable target 'Hipertensión'
+Los modelos son:
+* Regresión Logística
+* Random Forest
+* Support Vector Machine
+Se evalúan las métricas de cada uno y comparan resultados.
 
 
 ## Modelos de aprendizaje no supervisado (AaprendizajeNoSupervisado.ipynb)
-
-
+Con la misma estructura del notebook anterior, este contiene cuatro modelos de aprendizaje no supervisado
+Reducción de dimensionalidad
+* Principal Components Analysis
+* Factor Analysis of Mixed Data
+Clustering
+* K-means
+* DBSCAN
 
 ## Detalle de la estructura del dataset
 A continuacion se detalla cada bloque temático y sus respectivas variables
