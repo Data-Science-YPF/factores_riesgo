@@ -20,33 +20,43 @@ en sus comportamientos y condiciones de vida.
 * Bianca Cristin
 
 ## Datasets utilizados
-Utilizaremos las bases de datos proporcionadas por el Indec para el año 2018
+Se utilizan bases de datos proporcionadas por el Indec para el año 2018
 https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos-2
 En la seccion salud, especificamente : "Encuesta Nacional de Factores de Riesgo (ENFR)"
-De ser necesario para el proyecto, ampliaremos el uso a las bases de datos correspondientes a los años 2005, 2009 y 2013
 
-El diccionario de registros puede encontrarse en el siguiente link:
+Diccionario de registros:
 https://docs.google.com/spreadsheets/d/1Sb_nay9oorUlxbLbh2d-kRkgiVJ69FBDOMVkDEll8sw/edit?usp=sharing
 
-La encuesta utilizada para la captura de datos puede encontrarse en el siguiente link:
+Encuesta utilizada para la captura de datos:
 https://www.indec.gob.ar/ftp/cuadros/sociedad/cuestionario_enfr_2018.pdf
 
 ## Estructura del repositorio
 * README.md
 * acondicionamiento.ipynb - archivo donde se realiza el renombre de columnas y limpieza general de los bloques temáticos
 * analisis_exploratorio.ipynb
-* datasets - carpeta con los archivos correspondientes a todos los años
-*    | friesgo2018.txt
+* ModelosClasificacion.ipynb - Regresión Logística, Random Forest y Support Vector Machine, para clasificar individuos con/sin hipertensión 
+* AprendizajeNoSupervisado.ipynb - Reducción de dimensionalidad(análisis de componentes principales y análisis factorial de datos mixtos) y Clustering (Kmeans y DBSCAN)
+* datasets - carpeta con los archivos que se utilizan y exportan en cada notebook del repositorio
+*    | friesgo_2018_raw.txt  -   archivo original 
+*    | friesgo_2018.csv
+*    | friesgo_analisis.csv
+*    | friesgo.csv
 * utils - carpeta con archivos de utilidad
 *    | codificaciones.py - diccionarios correspondientes a toda la codificacion usada en los datasets
 *    | funciones.py - funciones creadas para el uso comun en todo el analisis 
 
-## Organizacion del trabajo
 
+
+## Limpieza de datos (acondicionamiento.ipynb) 
+Este archivo contiene los pasos necesarios para la limpieza del dataset
+* Agrupamiento de las columnas en bloques temáticos
+* Renombre de columnas por nombres más explícitos
+* Creación y cálculo de nuevas columnas
+* Identificación del tipo de variables utilizadas en cada bloque temático
 ### Bloques temáticos
 Para un procesamiento eficiente y organizado, agruparemos las columnas por bloques tematicos. Para mas detalles de las columnas en cada bloque, remitirse al final de este README.
 
-* Ubicacion
+* Ubicación
 * Características del encuestado
 * Salud general
 * Actividad física
@@ -60,14 +70,8 @@ Para un procesamiento eficiente y organizado, agruparemos las columnas por bloqu
 * Mediciones antropometricas
 * Mediciones bioquimicas
 
-### Limpieza de datos
-Este archivo contiene los pasos necesarios para la limpieza del dataset
-* Agrupamiento de las columnas en los bloques temáticos antes mencionados
-* Renombre de columnas por nombres más explícitos
-* Creación y cálculo de nuevas columnas
-* Identificación del tipo de variables utilizadas en cada bloque temático
 
-### Análisis exploratorio
+## Análisis exploratorio (analisisBD.ipynb)
 Este archivo contiene los pasos necesarios para realizar el análisis exploratorio de los datos, en una primera instancia, se tratan los bloques temáticos identificados en el archivo limpieza_datos.csv. Luego, todos los bloques temáticos se unifican en un único DataFrame para continuar con el análisis exploratorio del dataset limpio en su conjunto.
 
 El analisis exploratorio consiste en identificar y procesar estos puntos:
@@ -76,9 +80,18 @@ El analisis exploratorio consiste en identificar y procesar estos puntos:
 * Outliers
 * Colinealidad
 
-Finalmente, se detectan 'Preguntas disparadoras' referidas al dataset final, que se responden mediante gráficos y analisis.
+Finalmente, se detectan 'Preguntas disparadoras' referidas al dataset final, que se responden mediante gráficos y análisis.
 
-## Estructura del dataset
+
+## Modelos de aprendizaje supervisado (ModelosClasificacion.ipynb)
+El archivo contiene los 
+
+
+## Modelos de aprendizaje no supervisado (AaprendizajeNoSupervisado.ipynb)
+
+
+
+## Detalle de la estructura del dataset
 A continuacion se detalla cada bloque temático y sus respectivas variables
 
 ### Ubicacion
